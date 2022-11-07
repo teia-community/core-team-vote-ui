@@ -1,0 +1,58 @@
+@use "sass:color";
+
+$themes: (
+  light: (
+    "body-background-color": lighten(white, 20%),
+    "general-text-color": lighten(black, 20%),
+    "header-color": lighten(black, 40%),
+    "link-color": lighten(blue, 20%),
+    "footer-background-color": darken(white, 2%),
+    "navlink-background-color": darken(white, 6%),
+    "section-background-color": darken(white, 2%),
+    "button-background-color": darken(white, 6%),
+    "button-hover-background-color": darken(white, 10%),
+    "is-user-background-color": lighten(green, 60%),
+    "is-user-hover-background-color": lighten(green, 50%),
+    "proposal-id-background-color": white,
+    "option-background-color": white,
+    "user-vote-background-color": lighten(green, 60%),
+    "message-background-color": rgba(0, 0, 0, 0.5),
+  ),
+  dark: (
+    "body-background-color": lighten(black, 20%),
+    "general-text-color": lighten(white, 20%),
+    "header-color": lighten(white, 40%),
+    "link-color": lighten(blue, 25%),
+    "footer-background-color": darken(black, 2%),
+    "navlink-background-color": darken(black, 6%),
+    "section-background-color": darken(black, 2%),
+    "button-background-color": darken(black, 6%),
+    "button-hover-background-color": darken(black, 10%),
+    "is-user-background-color": lighten(green, 10%),
+    "is-user-hover-background-color": lighten(green, 20%),
+    "proposal-id-background-color": black,
+    "option-background-color": black,
+    "user-vote-background-color": lighten(green, 60%),
+    "message-background-color": rgba(255, 255, 255, 0.5),
+  ),
+);
+
+@mixin theme($themes_map) {
+  @each $theme, $map in $themes_map {
+    @if $theme == "default" {
+      :root {
+        @each $key, $value in $map {
+          --#{$key}: #{$value};
+        }
+      }
+    } @else {
+      [data-theme="#{$theme}"] {
+        @each $key, $value in $map {
+          --#{$key}: #{$value};
+        }
+      }
+    }
+  }
+}
+
+@include theme($themes_map: $themes);
