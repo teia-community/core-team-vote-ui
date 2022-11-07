@@ -1,23 +1,23 @@
 // Media queries breakpoint variables
-$S:  480px; // 30em for 16px body font
-$M:  816px; // 51em for 16px body font
+$S: 480px; // 30em for 16px body font
+$M: 816px; // 51em for 16px body font
 $L: 1440px; // 90em for 16px body font
 
 // Color variables
-$general-text-color: lighten(black, 20%);
-$header-color: lighten(black, 40%);
-$link-color: lighten(blue, 20%);
-$footer-background-color: darken(white, 2%);
-$navlink-background-color: darken(white, 6%);
-$section-background-color: darken(white, 2%);
-$button-background-color: darken(white, 6%);
-$button-hover-background-color: darken(white, 10%);
-$is-user-background-color: lighten(green, 60%);
-$is-user-hover-background-color: lighten(green, 50%);
-$proposal-id-background-color: white;
-$option-background-color: white;
-$user-vote-background-color: lighten(green, 60%);
-$message-background-color: rgba(0, 0, 0, 0.5);
+// $general-text-color: lighten(black, 20%);
+// var(--header-color): lighten(black, 40%);
+// $link-color: lighten(blue, 20%);
+// var(--footer-background-color): darken(white, 2%);
+// $navlink-background-color: darken(white, 6%);
+// var(--section-background-color): darken(white, 2%);
+// var(--button-background-color): darken(white, 6%);
+// var(--button-hover-background-color): darken(white, 10%);
+// var(--is-user-background-color): lighten(green, 60%);
+// var(--is-user-hover-background-color): lighten(green, 50%);
+// $proposal-id-background-color: white;
+// var(--option-background-color): white;
+// var(--user-vote-background-color): lighten(green, 60%);
+// var(--message-background-color): rgba(0, 0, 0, 0.5);
 
 // Length variables
 $small-gap: 0.5em;

@@ -2,47 +2,63 @@
  * General styling
  */
 
-*, *:before, *:after {
-    box-sizing: border-box;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 1em;
-    line-height: 1.4;
-    color: $general-text-color;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 1em;
+  line-height: 1.4;
+  color: var(--general-text-color);
+  background-color: var(--body-background-color);
 }
 
 a {
-    text-decoration: none;
-    color: $link-color;
+  text-decoration: none;
+  color: var(--link-color);
 
-    &:hover, &:focus {
-        text-decoration: underline;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  h1 &,
+  h2 &,
+  h3 &,
+  h4 &,
+  h5 &,
+  h6 & {
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
     }
-
-    h1 &, h2 &, h3 &, h4 &, h5 &, h6 & {
-        color: inherit;
-
-        &:hover, &:focus {
-            text-decoration: none;
-        }
-    }
+  }
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
-    color: $header-color;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  color: var(--header-color);
 }
 
 h1 {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 h2 {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 h3 {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }

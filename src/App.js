@@ -7,8 +7,19 @@ import { Parameters } from './containers/parameters';
 import { Proposals } from './containers/proposals';
 import { CreateProposalForms } from './containers/forms';
 
+export function toggle_theme(){
+    if (localStorage.theme === "dark"){
+        localStorage.setItem("theme", "light")
+    }
+    else {
+        localStorage.setItem("theme", "dark")
+    }
+
+    document.documentElement.setAttribute('data-theme', localStorage.theme)
+}
 
 export function App() {
+    document.documentElement.setAttribute('data-theme', localStorage.theme || "light")
     return (
         <CoreTeamVoteContextProvider>
             <div className='app-container'>
